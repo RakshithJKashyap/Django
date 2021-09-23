@@ -3,9 +3,27 @@
 {% block content %}
 {{m}}
 {% if age > 10 %}
-<p>number is greater than 10</p>
+<p>age is greater than 10</p>
+
+
+{% elif age == 10 %}
+<p>10 10 10</p>
+
+
 {%else%}
 <p>leave leave</p>
 {% endif %}
+
+<hr>
+
+<h1>Projects</h1> 
+<ul>
+    {% for project in projects %}
+        <li>Title: <a href="{% url 'Products' project.id  %}">{{project.title}}</a>-----{{project.description}}</li>
+        
+ 
+    {%  endfor%}
+</ul>
+
 <h1>Hello World</h1>
-{% endblock content %}   
+{% endblock content %}    
