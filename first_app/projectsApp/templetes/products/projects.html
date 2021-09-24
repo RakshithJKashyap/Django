@@ -19,8 +19,9 @@
 <h1>Projects</h1> 
 <ul>
     {% for project in projects %}
-        <li>Title: <a href="{% url 'Products' project.id  %}">{{project.title}}</a>-----{{project.description}}</li>
         
+        <li>Title: <a href="{% url 'Products' project.id  %}">{{project.title}}</a>----{{project.desciption}}</li>
+        <a href="{%url 'updateProject' project.id%}">Edit</a>
  
     {%  endfor%}
 </ul>
